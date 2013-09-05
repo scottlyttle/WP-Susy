@@ -1,0 +1,11 @@
+$light: 300;
+$regular: 400;
+$bold: 700;
+
+$primary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$secondary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@mixin font-size($sizeValue: 16) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem;
+}
