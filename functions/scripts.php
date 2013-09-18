@@ -1,8 +1,14 @@
 <?php
 function yabtfw_scripts() {
+	// Styles
+	wp_enqueue_style( 'stylesheet', get_stylesheet_uri() );
+	wp_enqueue_style( 'gravityforms', get_stylesheet_uri() . '/css/gravityforms.css', 'stylesheet', '1.0');
+
+	// Scripts
 	wp_enqueue_script('jquery');
-	wp_enqueue_script('plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'));
-	wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.js', array('jquery'));
+	wp_enqueue_script('plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), true);
+	wp_enqueue_script('functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), true);
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
