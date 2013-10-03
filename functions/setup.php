@@ -1,6 +1,6 @@
 <?php
 if ( ! function_exists( 'yabtfw_setup' ) ) :
-	function frankiewp_setup() {
+	function yabtfw_setup() {
 		//Enable support for Post Thumbnails
 		add_theme_support( 'post-thumbnails' );
 

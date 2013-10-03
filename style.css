@@ -271,7 +271,11 @@ ol.commentlist li.parent {
   padding-left: 1em;
   padding-right: 1em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  width: 100%;
+  float: left;
+  margin-right: 7.14286%;
+  display: inline; }
   #header:after {
     content: "";
     display: table;
