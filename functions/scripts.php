@@ -1,7 +1,7 @@
 <?php
 function yabtfw_scripts() {
 	// Styles
-	wp_enqueue_style( 'gravityforms', get_stylesheet_uri() . '/css/gravityforms.css', array(), '1.0');
+	wp_enqueue_style( 'gravityforms', get_template_directory_uri() . '/css/gravityforms.css', array(), '1.0');
 
 	// Scripts
 	wp_enqueue_script('jquery');
