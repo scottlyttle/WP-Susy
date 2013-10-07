@@ -1,11 +1,64 @@
-$light: 300;
-$regular: 400;
-$bold: 700;
+// ==============================================================
+//		variables
+// ==============================================================
 
-$primary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$secondary-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$light_font: 300;
+$regular_font: 400;
+$bold_font: 700;
+
+$primary_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$secondary_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 @mixin font-size($sizeValue: 16) {
   font-size: $sizeValue + px;
-  font-size: ($sizeValue / 10) + rem;
+  font-size: ($sizeValue / 16) + rem;
+}
+
+// ==============================================================
+//		base styles
+// ==============================================================
+
+h1, h2, h3, h4, h5,
+.alpha, .bravo, .charlie, .delta, .echo {
+
+}
+
+h1, .alpha {
+
+}
+
+h2, .bravo {
+
+}
+
+h3, .charlie {
+
+}
+
+h4, .delta {
+
+}
+
+h5, .echo {
+
+}
+
+p {
+
+}
+
+a {
+
+}
+
+span {
+
+}
+
+ol, ol ol, ul, ul ul {
+
+}
+
+blockquote {
+
 }
