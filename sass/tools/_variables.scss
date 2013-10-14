@@ -6,24 +6,12 @@ $primaryColor: #333;
 $secondaryColor: #333;
 
 // ==============================================================
-//		responsive
+//		fonts
 // ==============================================================
 
-@mixin break($point) {
-	@if $point == laptop {
-		@media (max-width: 1100px) { @content; }
-	}
-	@else if $point == tablet {
-		@media (max-width: 900px) { @content; }
-	}
-	@else if $point == phone {
-		@media (max-width: 480px)  { @content; }
-	}
-}
-
-@mixin custombreak($point) {
-    @media all and (max-width: $point) { @content; }
-}
+// ==============================================================
+//		margins and padding
+// ==============================================================
 
 // ==============================================================
 //		Susy grid settings

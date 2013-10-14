@@ -1,0 +1,92 @@
+// ==============================================================
+//		responsive
+// ==============================================================
+
+@mixin break($point) {
+	@if $point == laptop {
+		@media (max-width: 1100px) { @content; }
+	}
+	@else if $point == tablet {
+		@media (max-width: 900px) { @content; }
+	}
+	@else if $point == phone {
+		@media (max-width: 480px)  { @content; }
+	}
+}
+
+@mixin maxbreak($point) {
+    @media all and (max-width: $point) { 
+    	@content; 
+    }
+}
+
+@mixin minbreak($point) {
+    @media all and (min-width: $point) { 
+    	@content; 
+    }
+}
+
+// ==============================================================
+//		fonts
+// ==============================================================
+
+@mixin legibility {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+// opacity
+@mixin opacity($opacity) {
+    filter: unquote("progid:DXImageTransform.Microsoft.Alpha(Opacity=#{round($opacity * 100)})");
+    opacity: $opacity;
+}
+
+// input placeholder
+@mixin placeholder($color : $primary_color) {
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+	&:-moz-placeholder {
+		color: $color;
+	}
+	&:-ms-input-placeholder {
+		color: $color;
+	}
+}
+
+// position
+@mixin position ($position: relative, $coordinates: 0 0 0 0) {
+	@if type-of($position) == list {
+		$coordinates: $position;
+		$position: relative;
+	}
+	$top: nth($coordinates, 1);
+	$right: nth($coordinates, 2);
+	$bottom: nth($coordinates, 3);
+	$left: nth($coordinates, 4);
+	position: $position;
+	@if $top == auto {
+		top: $top;
+	}
+	@else if not(unitless($top)) {
+		top: $top;
+	}
+	@if $right == auto {
+		right: $right;
+	}
+	@else if not(unitless($right)) {
+		right: $right;
+	}
+	@if $bottom == auto {
+		bottom: $bottom;
+	}
+	@else if not(unitless($bottom)) {
+		bottom: $bottom;
+	}
+	@if $left == auto {
+		left: $left;
+	}
+	@else if not(unitless($left)) {
+		left: $left;
+	}
+}

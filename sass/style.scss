@@ -7,20 +7,22 @@ Author URI: http://authorswebsite.com
 Version: 1.0
 */
 
-// Bringing in the compass and grid functions
+// Tools
 @import "compass";
 @import "susy";
+@import "tools/base";
+@import "tools/variables";
 
-// Resets and Defaults
-@import "reset";
-@import "wordpress";
+// Setup
+@import "setup/reset";
+@import "setup/wordpress";
+@import "setup/icons";
+@import "setup/typography";
 
-// Bits and Bobs
-@import "variables";
-@import "typography";
-@import "icons";
+// Modules
+@import "modules/global";
 
-// Theme Styles
-@import "global";
-@import "header";
-@import "footer";
+// Layout
+@import "layout/global";
+@import "layout/header";
+@import "layout/footer";
