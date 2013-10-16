@@ -93,7 +93,7 @@ module.exports = function(grunt) {
                 'js/plugins/**/*.js',
                 '*.php'
             ],
-            tasks: ['jshint', 'concat', 'uglify', 'compass:dev'],
+            tasks: ['jshint', 'concat', 'compass:dev'],
             options: {
                 livereload: true,
             }
