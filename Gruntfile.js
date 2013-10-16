@@ -33,6 +33,7 @@ module.exports = function(grunt) {
             setup: {
                 src: ['js/setup/modernizr-2.6.2.js', 'js/setup/respond.js'],
                 dest: 'js/build/modernizr-respond.js',
+                preserveComments: 'all'
             },
             plugins: {
                 src: ['js/plugins/*.js'],
@@ -47,22 +48,20 @@ module.exports = function(grunt) {
         },
         uglify: {
             setup: {
-                src: ['js/setup/modernizr-2.6.2.js', 'js/setup/respond.js'],
+                src: 'js/build/modernizr-respond.js',
                 dest: 'js/build/modernizr-respond.min.js',
+                preserveComments: 'none'
             },
             plugins: {
-                src: ['js/plugins/*.js'],
+                src: 'js/build/plugins.js',
                 dest: 'js/build/plugins.min.js',
-                preserveComments: 'all'
+                preserveComments: 'none'
             },
             source: {
-                 src: ['js/source/*.js'],
+                 src: 'js/build/source.js',
                 dest: 'js/build/source.min.js',
-                preserveComments: 'all'
+                preserveComments: 'none'
             },
-            options: {
-                preserveComments: 'all'
-            }
         },
         compass: {
             options: {
@@ -94,7 +93,7 @@ module.exports = function(grunt) {
                 'js/plugins/**/*.js',
                 '*.php'
             ],
-            tasks: ['jshint', 'concat', 'compass:dev'],
+            tasks: ['jshint', 'concat', 'uglify', 'compass:dev'],
             options: {
                 livereload: true,
             }
@@ -107,12 +106,11 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-livereload');
 
     // Tasks
     grunt.registerTask('default', ['jshint', 'concat', 'compass:dev']);
     grunt.registerTask('dev', ['jshint', 'concat', 'compass:dev']);
-    grunt.registerTask('prod', ['jshint', 'uglify', 'compass:prod']);
+    grunt.registerTask('prod', ['jshint', 'concat', 'uglify', 'compass:prod']);
 };
