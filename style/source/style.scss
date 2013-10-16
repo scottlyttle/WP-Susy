@@ -1,0 +1,27 @@
+/*!   
+Theme Name: Theme Name
+Theme URI: http://website.com.au
+Description: Custom Theme for Company Name
+Author: Author Name
+Author URI: http://authorswebsite.com
+Version: 1.0
+*/
+
+// Tools
+@import "compass";
+@import "susy";
+@import "tools/base";
+@import "tools/variables";
+
+// Setup
+@import "setup/reset";
+@import "setup/wordpress";
+@import "setup/icons";
+@import "setup/typography";
+
+// Modules
+@import "modules/global";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
