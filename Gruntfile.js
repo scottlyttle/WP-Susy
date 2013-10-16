@@ -58,7 +58,7 @@ module.exports = function(grunt) {
                 preserveComments: 'none'
             },
             source: {
-                 src: 'js/build/source.js',
+                src: 'js/build/source.js',
                 dest: 'js/build/source.min.js',
                 preserveComments: 'none'
             },
@@ -105,7 +105,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-livereload');
 
