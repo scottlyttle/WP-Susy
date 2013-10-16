@@ -1,6 +1,6 @@
 .DS_Store
 .sass-cache
-.node_modules
+node_modules
 
 # Add the below when developing
 # .gitignore
