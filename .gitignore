@@ -4,7 +4,4 @@ node_modules
 
 # Add the below when developing
 # .gitignore
-# Gruntfile.js
-# package.json
 # .git
-# config.rb

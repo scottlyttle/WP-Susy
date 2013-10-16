@@ -6,7 +6,7 @@ function yabtfw_scripts() {
 	// Scripts
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('plugins', get_template_directory_uri() . '/js/build/plugins.js', array('jquery'), true);
-	wp_enqueue_script('functions', get_template_directory_uri() . '/js/build/source.js', array('jquery'), true);
+	wp_enqueue_script('scripts', get_template_directory_uri() . '/js/build/scripts.js', array('jquery'), true);
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

@@ -40,9 +40,9 @@ module.exports = function(grunt) {
                 dest: 'js/build/plugins.js',
                 preserveComments: 'all'
             },
-            source: {
-                 src: ['js/source/*.js'],
-                dest: 'js/build/source.js',
+            scripts: {
+                 src: ['js/scripts/*.js'],
+                dest: 'js/build/scripts.js',
                 preserveComments: 'all'
             },
         },
@@ -58,8 +58,8 @@ module.exports = function(grunt) {
                 preserveComments: 'none'
             },
             source: {
-                src: 'js/build/source.js',
-                dest: 'js/build/source.min.js',
+                src: 'js/build/scripts.js',
+                dest: 'js/build/scripts.min.js',
                 preserveComments: 'none'
             },
         },
@@ -69,6 +69,7 @@ module.exports = function(grunt) {
                 cssDir: 'style/build',
                 javascriptsDir: 'js/build',
                 fontsDir: 'fonts',
+                imageDir: 'img',
                 environment: 'development',
                 relativeAssets: true,
                 noLineComments: true,
@@ -88,7 +89,7 @@ module.exports = function(grunt) {
         watch: {
             files: [
                 'style/source/**/*.scss', 
-                'js/source/**/*.js',
+                'js/scripts/**/*.js',
                 'js/setup/*.js',
                 'js/plugins/**/*.js',
                 '*.php'
